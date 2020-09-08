@@ -1,0 +1,37 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+.button {
+    -fx-background-size: 16px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-radius: 0;
+}
+
+.text-field {
+    -fx-background-radius: 0;
+}
+
+.text-area {
+    -fx-background-radius: 0;
+}
+
+#backButton {
+    -fx-background-image: url('back.png');
+}
+
+#nextButton {
+    -fx-background-image: url('next.png');
+}
+
+#refreshButton {
+    -fx-background-image: url('refresh.png');
+}
+
+#favoritesButton {
+    -fx-background-image: url('bookmark.png');
+}
+
+#downloadButton {
+    -fx-background-image: url('download.png');
+}
+

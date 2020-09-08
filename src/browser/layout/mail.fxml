@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="browser.controller.MailController">
+   <children>
+      <BorderPane layoutX="186.0" layoutY="100.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <bottom>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <padding>
+                  <Insets left="50.0" right="50.0" />
+               </padding>
+               <top>
+                  <Label text="正文" BorderPane.alignment="CENTER" />
+               </top>
+               <center>
+                  <TextArea fx:id="mailContent" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <padding>
+                        <Insets bottom="20.0" />
+                     </padding>
+                  </TextArea>
+               </center>
+               <bottom>
+                  <Button fx:id="sendButton" mnemonicParsing="false" onAction="#sendMail" text="发送" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </BorderPane.margin>
+                  </Button>
+               </bottom>
+            </BorderPane>
+         </bottom>
+         <center>
+            <GridPane prefHeight="400.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="128.0" minHeight="10.0" prefHeight="76.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="224.0" minHeight="10.0" prefHeight="71.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <center>
+                        <TextField fx:id="fromMailbox" prefHeight="40.0" BorderPane.alignment="CENTER">
+                           <padding>
+                              <Insets right="5.0" />
+                           </padding>
+                        </TextField>
+                     </center>
+                     <top>
+                        <Label text="发件人QQ邮箱" BorderPane.alignment="CENTER">
+                           <padding>
+                              <Insets top="20.0" />
+                           </padding>
+                        </Label>
+                     </top>
+                     <padding>
+                        <Insets left="50.0" right="50.0" />
+                     </padding>
+                  </BorderPane>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                     <padding>
+                        <Insets left="50.0" right="50.0" />
+                     </padding>
+                     <top>
+                        <Label text="发件人密码" BorderPane.alignment="CENTER">
+                           <padding>
+                              <Insets top="20.0" />
+                           </padding>
+                        </Label>
+                     </top>
+                     <center>
+                        <PasswordField fx:id="fromPassword" prefHeight="40.0" BorderPane.alignment="CENTER">
+                           <BorderPane.margin>
+                              <Insets />
+                           </BorderPane.margin>
+                        </PasswordField>
+                     </center>
+                  </BorderPane>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                     <center>
+                        <TextField fx:id="toMailbox" prefHeight="40.0" BorderPane.alignment="CENTER">
+                           <padding>
+                              <Insets right="5.0" />
+                           </padding>
+                        </TextField>
+                     </center>
+                     <padding>
+                        <Insets left="50.0" right="50.0" />
+                     </padding>
+                     <top>
+                        <Label text="收件人邮箱" BorderPane.alignment="CENTER">
+                           <padding>
+                              <Insets top="20.0" />
+                           </padding>
+                        </Label>
+                     </top>
+                  </BorderPane>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <center>
+                        <TextField fx:id="mailTitle" prefHeight="40.0" BorderPane.alignment="CENTER">
+                           <padding>
+                              <Insets right="5.0" />
+                           </padding>
+                        </TextField>
+                     </center>
+                     <padding>
+                        <Insets left="50.0" right="50.0" />
+                     </padding>
+                     <top>
+                        <Label text="邮件标题" BorderPane.alignment="CENTER">
+                           <padding>
+                              <Insets top="20.0" />
+                           </padding>
+                        </Label>
+                     </top>
+                  </BorderPane>
+               </children>
+            </GridPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.input.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.embed.swing.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="744.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="browser.controller.MainController">
+   <children>
+      <VBox fx:id="vBox" prefHeight="744.0" prefWidth="955.0" spacing="10.0">
+         <children>
+            <HBox fx:id="hBox" prefHeight="48.0" prefWidth="955.0" spacing="5.0">
+               <children>
+                  <Button fx:id="backButton" mnemonicParsing="false" onAction="#prePage" prefWidth="50.0" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="nextButton" mnemonicParsing="false" onAction="#nextPage" prefWidth="50.0" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="refreshButton" mnemonicParsing="false" onAction="#refresh" prefWidth="50.0" HBox.hgrow="ALWAYS" />
+                  <TextField fx:id="URLBar" onAction="#visitedURL" promptText="URL" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="favoritesButton" mnemonicParsing="false" onAction="#bookmark" prefWidth="50.0" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="downloadButton" mnemonicParsing="false" onAction="#openDownload" prefWidth="50.0" HBox.hgrow="NEVER" />
+                  <MenuButton fx:id="menuButton" mnemonicParsing="false" text="菜单">
+                    <items>
+                      <MenuItem fx:id="openMail" mnemonicParsing="false" onAction="#openMail" text="发送邮件" />
+                        <MenuItem fx:id="viewHistoryButton" mnemonicParsing="false" onAction="#openHistory" text="查看历史记录" />
+                        <MenuItem fx:id="downloadManageButton" mnemonicParsing="false" onAction="#downloadManage" text="下载管理" />
+                    </items>
+                  </MenuButton>
+               </children>
+               <padding>
+                  <Insets left="5.0" right="5.0" />
+               </padding>
+            </HBox>
+            <ListView fx:id="bookmarkListView" onMouseClicked="#visitBookmarks" orientation="HORIZONTAL" prefHeight="90.0" prefWidth="955.0" />
+            <TabPane fx:id="tabPane" prefHeight="568.0" prefWidth="945.0" tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </VBox.margin>
+            </TabPane>
+         </children>
+         <padding>
+            <Insets bottom="5.0" top="5.0" />
+         </padding>
+      </VBox>
+      
+   </children>
+</AnchorPane>
